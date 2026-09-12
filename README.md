@@ -96,6 +96,10 @@ SQL
 Missing Skills:
 Django
 
+```
+
+---
+
 ## 3. 📊 Internship Ranking
 
 After evaluating internships, InternPilot AI ranks them based on their match score.
