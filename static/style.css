@@ -1,0 +1,410 @@
+/* ============================================================
+GLOBAL
+============================================================ */
+
+body {
+    background-color: #f5f7fb;
+    color: #212529;
+    min-height: 100vh;
+}
+
+/* ============================================================
+NAVBAR
+============================================================ */
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================================
+HERO
+============================================================ */
+
+main {
+    max-width: 1100px;
+}
+
+.hero {
+    margin-bottom: 50px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    margin-bottom: 18px;
+
+    background: rgba(13, 110, 253, 0.08);
+    color: #0d6efd;
+
+    border: 1px solid rgba(13, 110, 253, 0.15);
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.hero-title {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+.hero-title span {
+    color: #0d6efd;
+}
+
+.hero-subtitle {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+
+    color: #6c757d;
+}
+
+/* ============================================================
+CARDS
+============================================================ */
+
+.card {
+    border: none;
+    border-radius: 16px;
+}
+
+.card-body {
+    border-radius: 16px;
+}
+
+/* ============================================================
+FORM ELEMENTS
+============================================================ */
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+    padding: 11px 14px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.12);
+}
+
+/* ============================================================
+BUTTONS
+============================================================ */
+
+.btn {
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+#searchBtn {
+    min-width: 240px;
+}
+
+/* ============================================================
+CHAT PANEL
+============================================================ */
+
+.chat-panel {
+    position: fixed;
+    right: 24px;
+    bottom: 90px;
+
+    width: 380px;
+    max-width: calc(100vw - 32px);
+    height: 520px;
+    max-height: calc(100vh - 120px);
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.20);
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1050;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px) scale(0.97);
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* CHAT OPEN STATE */
+
+.chat-panel.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* ============================================================
+CHAT HEADER
+============================================================ */
+
+.chat-panel-header {
+    background: linear-gradient(
+        135deg,
+        #0d6efd,
+        #6f42c1
+    );
+
+    color: #ffffff;
+
+    padding: 16px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-panel-header small {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+/* CLOSE BUTTON */
+
+.chat-close-btn {
+    border: none;
+    background: transparent;
+    color: #ffffff;
+
+    font-size: 20px;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-close-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================================
+CHAT MESSAGES
+============================================================ */
+
+.chat-box {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 18px;
+
+    background: #f8f9fa;
+}
+
+/* BOT MESSAGE */
+
+.bot-message {
+    background: #ffffff;
+
+    border: 1px solid #e9ecef;
+
+    color: #212529;
+
+    padding: 10px 13px;
+
+    border-radius: 12px 12px 12px 4px;
+
+    margin-bottom: 12px;
+
+    max-width: 85%;
+
+    line-height: 1.5;
+
+    word-wrap: break-word;
+}
+
+/* USER MESSAGE */
+
+.user-message {
+    background: #212529;
+
+    color: #ffffff;
+
+    padding: 10px 13px;
+
+    border-radius: 12px 12px 4px 12px;
+
+    margin-bottom: 12px;
+
+    margin-left: auto;
+
+    max-width: 85%;
+
+    line-height: 1.5;
+
+    word-wrap: break-word;
+}
+
+/* ============================================================
+CHAT INPUT
+============================================================ */
+
+.chat-input-area {
+    padding: 12px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e9ecef;
+}
+
+.chat-input-area .form-control {
+    border-radius: 10px 0 0 10px;
+}
+
+.chat-input-area .btn {
+    border-radius: 0 10px 10px 0;
+}
+
+/* ============================================================
+FLOATING AI BUTTON
+============================================================ */
+
+.floating-chat-btn {
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    z-index: 1040;
+
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        #0d6efd,
+        #6f42c1
+    );
+
+    color: #ffffff;
+
+    padding: 12px 18px;
+
+    border-radius: 50px;
+
+    box-shadow:
+        0 8px 25px rgba(13, 110, 253, 0.28);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.floating-chat-btn:hover {
+    background: linear-gradient(
+        135deg,
+        #0b5ed7,
+        #59359a
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(13, 110, 253, 0.35);
+}
+
+.floating-chat-btn:active {
+    transform: translateY(0);
+}
+
+/* ROBOT ICON */
+
+.floating-chat-icon {
+    font-size: 20px;
+}
+
+/* ============================================================
+SCROLLBAR
+============================================================ */
+
+.chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: #ced4da;
+    border-radius: 10px;
+}
+
+/* ============================================================
+MOBILE RESPONSIVE
+============================================================ */
+
+@media (max-width: 576px) {
+
+    .chat-panel {
+        right: 12px;
+        bottom: 78px;
+
+        width: calc(100vw - 24px);
+
+        height: 500px;
+        max-height: calc(100vh - 100px);
+
+        border-radius: 16px;
+    }
+
+    .floating-chat-btn {
+        right: 12px;
+        bottom: 12px;
+
+        padding: 11px 16px;
+    }
+
+    main {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    #searchBtn {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero-title {
+        letter-spacing: -0.8px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
