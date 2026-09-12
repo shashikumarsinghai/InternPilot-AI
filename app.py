@@ -385,11 +385,11 @@ if __name__ == "__main__":
     print("\n===================================")
     print("        InternPilot AI")
     print("===================================")
-    print("Server: http://127.0.0.1:5000")
+    print("         Server Starting...")
     print("===================================\n")
 
     app.run(
-        debug=True,
-        host="127.0.0.1",
-        port=5000
+        debug=False,
+        host="0.0.0.0",
+        port=int(os.getenv("PORT", 5000))
     )
