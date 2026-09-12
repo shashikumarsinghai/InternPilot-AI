@@ -12,6 +12,12 @@ Instead of manually searching through hundreds of listings, students can enter w
 
 ---
 
+## 🚀 Links
+
+👉 **[Live Demo](https://internpilot-ai.onrender.com)**
+
+👉 **[GitHub Repository](https://github.com/shashikumarsinghai/InternPilot-AI)**
+
 ## 🎯 The Problem
 
 Students often face several challenges while searching for internships:
